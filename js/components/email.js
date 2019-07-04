@@ -8,8 +8,8 @@ Fliplet.FormBuilder.field('email', {
   },
   validations: {
     value: {
-      required: window.validators.required,
-      email: window.validators.email
+      email: window.validators.email,
+      required: window.validators.required
     }
-  },
+  }
 });

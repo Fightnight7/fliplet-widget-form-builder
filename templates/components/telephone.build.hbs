@@ -8,3 +8,4 @@
   :placeholder="placeholder"
   :required="required"
 />
+<div class="text-danger" v-if="!$v.value.required && $v.value.$model === ''">Field is required.</div>

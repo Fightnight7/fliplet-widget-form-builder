@@ -14,6 +14,13 @@ Fliplet.FormBuilder.field('number', {
       default: 0
     }
   },
+  validations: {
+    value: {
+      required: window.validators.required,
+      minValue: window.validators.minValue(0),
+      numeric: window.validators.numeric
+    }
+  },
   methods: {
     updateValue: function () {
       var ensureNumberRx = new RegExp(

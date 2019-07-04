@@ -5,5 +5,10 @@ Fliplet.FormBuilder.field('telephone', {
     placeholder: {
       type: String
     }
+  },
+  validations: {
+    value: {
+      required: window.validators.required
+    }
   }
 });

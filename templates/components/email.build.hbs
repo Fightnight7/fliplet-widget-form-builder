@@ -8,5 +8,5 @@
   :placeholder="placeholder"
   :required="required"
 />
-<div class="text-danger" v-if="!$v.value.required || !$v.value.email">Field is required</div>
-<div class="text-danger" v-if="!$v.value.email">Email should be valid</div>
+<div class="text-danger" v-if="!$v.value.email">Email should be valid.</div>
+<div class="text-danger" v-if="!$v.value.required && $v.value.$model !== ''">Field is required.</div>

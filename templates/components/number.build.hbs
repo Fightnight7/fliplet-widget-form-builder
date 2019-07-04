@@ -11,3 +11,6 @@
   :step="step"
   :min="min"
 />
+<div class="text-danger" v-if="!$v.value.required && $v.value.$model !== ''">Field is required.</div>
+<!--<div class="text-danger" v-if="!$v.value.numeric">Only numeric value.</div>-->
+<div class="text-danger" v-if="!$v.value.minValue">Only positive numeric value.</div>

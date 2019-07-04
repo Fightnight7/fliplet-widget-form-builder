@@ -15,7 +15,7 @@ this["Fliplet"]["Widget"]["Templates"]["templates.components.date"] = Handlebars
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.email"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<input\n  type=\"email\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n/>\n";
+    return "<input\n  type=\"email\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n/>\n<div class=\"text-danger\" v-if=\"!$v.value.email\">Email should be valid.</div>\n<div class=\"text-danger\" v-if=\"!$v.value.required && $v.value.$model !== ''\">Field is required.</div>\n";
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.field"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -39,11 +39,11 @@ this["Fliplet"]["Widget"]["Templates"]["templates.components.image"] = Handlebar
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.input"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<input\n  type=\"text\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n/>\n";
+    return "<input\n  type=\"text\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n/>\n<div class=\"text-danger\" v-if=\"!$v.value.minLength\">Field must have at least 5 characters.</div>\n<div class=\"text-danger\" v-if=\"!$v.value.required && $v.value.$model !== ''\">Field is required.</div>\n";
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.number"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<input\n  :type=\"inputType\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n  :pattern=\"pattern\"\n  :step=\"step\"\n  :min=\"min\"\n/>\n";
+    return "<input\n  :type=\"inputType\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n  :pattern=\"pattern\"\n  :step=\"step\"\n  :min=\"min\"\n/>\n<div class=\"text-danger\" v-if=\"!$v.value.required && $v.value.$model !== ''\">Field is required.</div>\n<!--<div class=\"text-danger\" v-if=\"!$v.value.numeric\">Only numeric value.</div>-->\n<div class=\"text-danger\" v-if=\"!$v.value.minValue\">Only positive numeric value.</div>\n";
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.paragraph"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -71,7 +71,7 @@ this["Fliplet"]["Widget"]["Templates"]["templates.components.starRating"] = Hand
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.telephone"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<input\n  type=\"tel\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n/>\n";
+    return "<input\n  type=\"tel\"\n  class=\"form-control\"\n  v-model.trim=\"value\"\n  v-on:input=\"updateValue()\"\n  :name=\"name\"\n  :id=\"name\"\n  :placeholder=\"placeholder\"\n  :required=\"required\"\n/>\n<div class=\"text-danger\" v-if=\"!$v.value.required && $v.value.$model === ''\">Field is required.</div>\n";
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.textarea"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
