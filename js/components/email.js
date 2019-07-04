@@ -5,5 +5,11 @@ Fliplet.FormBuilder.field('email', {
     placeholder: {
       type: String
     }
-  }
+  },
+  validations: {
+    value: {
+      required: window.validators.required,
+      email: window.validators.email
+    }
+  },
 });

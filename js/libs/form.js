@@ -94,7 +94,6 @@ Fliplet.Widget.instance('form-builder', function(data) {
         }
       });
     }
-
     return fields;
   }
 
@@ -103,7 +102,6 @@ Fliplet.Widget.instance('form-builder', function(data) {
   }
 
   var changeListeners = {};
-
   var $form = new Vue({
     el: $(selector)[0],
     data: function() {
@@ -126,9 +124,11 @@ Fliplet.Widget.instance('form-builder', function(data) {
     computed: {
       hasRequiredFields: function() {
         return this.fields.some(function(el) {
-          return !!el.required;
+          return true;
+          // return !!el.required;
         });
       }
+
     },
     methods: {
       start: function() {
