@@ -13,5 +13,11 @@ Fliplet.FormBuilder.field('radio', {
         }
       ]
     }
-  }
+  },
+  created: function(){
+    var formId = this.$parent.$el.dataset.formBuilderId;
+    if (parseInt(formId)!==NaN){
+      this.$refs.getId = parseInt(formId);
+    }
+  },
 });
